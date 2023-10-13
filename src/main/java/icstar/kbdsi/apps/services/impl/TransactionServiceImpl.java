@@ -41,7 +41,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public Page<Transaction> findTransactionContainingDescription(String description, boolean isDeleted, Integer pageNum, Integer pageSize) {
-        Page<Transaction> transactions = transactionRepository.findByDescriptionContainingAndIsDeleted(description, isDeleted,  PageRequest.of(pageNum, pageSize), Sort.by("description").descending().by("createdAt"));
+        Page<Transaction> transactions = transactionRepository.findByNameContainingAndIsDeleted(description, isDeleted,  PageRequest.of(pageNum, pageSize), Sort.by("description").descending().by("createdAt"));
         return transactions;
     }
 
