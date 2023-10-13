@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
     List<Transaction> findByIsDeleted(boolean isDeleted);
-    Page<Transaction> findByDescriptionContainingAndIsDeleted(String description, boolean isDeleted, PageRequest pageable, Sort sort);
+    Page<Transaction> findByNameContainingAndIsDeleted(String name, boolean isDeleted, PageRequest pageable, Sort sort);
 
     Page<Transaction> findByCategoryContainingAndIsDeletedAndCreatedAtBetween(String category, boolean isDeleted, Date createdAtStart, Date createdAtEnd, PageRequest pageable, Sort sort);
 
