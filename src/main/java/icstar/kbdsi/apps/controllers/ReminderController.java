@@ -113,6 +113,7 @@ public class ReminderController {
                 Reminder oldReminder = optReminder.get();
                 oldReminder.setDeleted(true);
                 oldReminder.setUpdatedBy(deleteDto.getUpdatedBy());
+                reminderRepository.save(oldReminder);
                 return new ResponseEntity<>("Reminder has been deleted",HttpStatus.OK);
             }
             else {
