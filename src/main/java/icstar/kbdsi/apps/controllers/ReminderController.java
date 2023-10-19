@@ -94,8 +94,8 @@ public class ReminderController {
             oldReminder.setRepeated(reminderDetailsDto.isRepeated());
             Date schDate = new SimpleDateFormat("dd/MM/yyyy").parse(reminderDetailsDto.getScheduleDate());
             Date payDate = new SimpleDateFormat("dd/MM/yyyy").parse(reminderDetailsDto.getPaymentDate());
-            oldReminder.setPaymentDate(schDate);
-            oldReminder.setScheduleDate(payDate);
+            oldReminder.setPaymentDate(payDate);
+            oldReminder.setScheduleDate(schDate);
             oldReminder.setUpdatedBy(reminderDetailsDto.getUpdatedBy());
             oldReminder.setEmail(reminderDetailsDto.getEmail());
             reminderRepository.save(oldReminder);
