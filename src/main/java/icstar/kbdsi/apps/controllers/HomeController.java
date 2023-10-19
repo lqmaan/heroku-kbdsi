@@ -12,6 +12,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(){
-        return "API For KBDSI Accounting System (ICStar Hackathon 2023) \n\n http://https://kbdsi-icstar-fe.vercel.app/";
+        return "API For KBDSI Accounting System (ICStar Hackathon 2023) \n\n https://kbdsi-icstar-fe.vercel.app/";
     }
 }
