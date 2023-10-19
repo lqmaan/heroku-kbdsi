@@ -22,7 +22,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-@CrossOrigin(origins = "https://kbdsi-icstar-g0cg82eie-lh007lucky-gmailcom.vercel.app/")
+@CrossOrigin(origins = {"http://localhost:4200", "https://kbdsi-icstar-fe.vercel.app/", "https://kbdsi-icstar-g0cg82eie-lh007lucky-gmailcom.vercel.app/" })
 @RestController
 @RequestMapping("/api")
 public class UserController {
