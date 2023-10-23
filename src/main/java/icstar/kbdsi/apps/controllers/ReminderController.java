@@ -173,7 +173,7 @@ public class ReminderController {
 //        System.out.println("Run cron at " + LocalDateTime.now());
 //    }
 
-    @Scheduled(cron = "0 */5 * * * *")
+    @Scheduled(cron = "0 */1 * * * *")
     public void DailyReminder(){
         System.out.println("Run cron at " + LocalDateTime.now());
         Date curDate = Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant());
@@ -201,7 +201,7 @@ public class ReminderController {
         }
     }
 
-    @Scheduled(cron = "0 */7 * * * *")
+    @Scheduled(cron = "0 */2 * * * *")
     public void EndMonthUpdate(){
         System.out.println("Run cron at " + LocalDateTime.now());
         List<Reminder> reminders = reminderService.findAllReminderByStatusAndRepeatedAndSend("ongoing", true, true);
